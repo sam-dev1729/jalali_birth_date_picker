@@ -140,8 +140,7 @@ class _DayCell extends StatelessWidget {
         ? toPersianDigits(date.day.toString())
         : date.day.toString();
 
-    final bgColor =
-        isSelected ? (theme.selectedDayColor ?? Colors.blue) : null;
+    final bgColor = isSelected ? (theme.selectedDayColor ?? Colors.blue) : null;
     final border = (isToday && !isSelected)
         ? Border.all(color: theme.todayBorderColor ?? Colors.blue)
         : null;

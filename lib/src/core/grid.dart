@@ -38,14 +38,12 @@ List<Jalali?> buildMonthGrid(
 
   final cells = <Jalali?>[
     ...List<Jalali?>.filled(leading, null),
-    for (var d = 1; d <= daysInMonth; d++)
-      Jalali(month.year, month.month, d),
+    for (var d = 1; d <= daysInMonth; d++) Jalali(month.year, month.month, d),
   ];
 
   final targetLength = padTo6Weeks
       ? _cellsPerWeek * _maxWeeksInMonth
-      : ((cells.length + _cellsPerWeek - 1) ~/ _cellsPerWeek) *
-          _cellsPerWeek;
+      : ((cells.length + _cellsPerWeek - 1) ~/ _cellsPerWeek) * _cellsPerWeek;
 
   while (cells.length < targetLength) {
     cells.add(null);

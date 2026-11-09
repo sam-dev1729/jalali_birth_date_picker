@@ -80,8 +80,7 @@ void main() {
       final grid = buildMonthGrid(Jalali(1403, 7, 1));
       final days = grid.whereType<Jalali>().toList();
       for (var i = 1; i < days.length; i++) {
-        expect(days[i].isAfter(days[i - 1]), isTrue,
-            reason: 'index $i');
+        expect(days[i].isAfter(days[i - 1]), isTrue, reason: 'index $i');
       }
     });
   });
@@ -112,7 +111,8 @@ void main() {
       }
     });
 
-    test('موقعیت روز اول = persianWeekday - 1 (روی همهٔ ماه‌های ۱۴۰۲–۱۴۰۴)', () {
+    test('موقعیت روز اول = persianWeekday - 1 (روی همهٔ ماه‌های ۱۴۰۲–۱۴۰۴)',
+        () {
       for (final jy in [1402, 1403, 1404]) {
         for (var jm = 1; jm <= 12; jm++) {
           final first = Jalali(jy, jm, 1);

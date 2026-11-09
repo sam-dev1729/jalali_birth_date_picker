@@ -1,0 +1,5 @@
+# Exclude from published package (independent of .gitignore)
+example/pubspec.lock
+example/.dart_tool/
+example/build/
+xai/

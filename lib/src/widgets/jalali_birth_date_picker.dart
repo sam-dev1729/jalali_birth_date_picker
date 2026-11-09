@@ -72,9 +72,8 @@ class _JalaliBirthDatePickerState extends State<JalaliBirthDatePicker> {
     setState(() {
       final month = _displayMonth.month;
       final year = _displayMonth.year;
-      _displayMonth = month == 1
-          ? Jalali(year - 1, 12, 1)
-          : Jalali(year, month - 1, 1);
+      _displayMonth =
+          month == 1 ? Jalali(year - 1, 12, 1) : Jalali(year, month - 1, 1);
     });
   }
 
@@ -82,9 +81,8 @@ class _JalaliBirthDatePickerState extends State<JalaliBirthDatePicker> {
     setState(() {
       final month = _displayMonth.month;
       final year = _displayMonth.year;
-      _displayMonth = month == 12
-          ? Jalali(year + 1, 1, 1)
-          : Jalali(year, month + 1, 1);
+      _displayMonth =
+          month == 12 ? Jalali(year + 1, 1, 1) : Jalali(year, month + 1, 1);
     });
   }
 
